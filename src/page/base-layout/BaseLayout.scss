@@ -1,0 +1,80 @@
+@import "./../../styles/index";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+.container {
+  max-width: $container-width + $content-space*2;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: $content-space;
+  padding-right: $content-space;
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    padding-left: $content-space-mobile;
+    padding-right: $content-space-mobile;
+  }
+}
+
+.page__inner {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  &::before {
+    content: "";
+    background-color: $brand-color;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% - 310px);
+
+    @media screen and (max-width: $breakpoint-sm) {
+      height: 100vh;
+    }
+  }
+}
+
+.common-paragraph {
+  @include paragraph();
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 16px;
+    line-height: 1.625;
+  }
+}
+
+.common-title {
+  color: $title-color-inversed;
+  @include common-title();
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 30px;
+    line-height: 1.33;
+  }
+}
+
+.mobile-only {
+  @media screen and (min-width: $breakpoint-sm+1) {
+    display: none !important;
+  }
+}

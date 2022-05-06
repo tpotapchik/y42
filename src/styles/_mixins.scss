@@ -1,0 +1,13 @@
+@mixin paragraph() {
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+  font-family: $main-font-family;
+  font-weight: $regular-font-weight;
+}
+
+@mixin common-title() {
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  font-family: $title-font-family;
+  font-weight: $bold-font-weight;
+}

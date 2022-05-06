@@ -1,0 +1,21 @@
+@import "~normalize.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $main-font-family;
+  color: $text-color;
+}
+
+a {
+  color: $text-color;
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+  }
+}

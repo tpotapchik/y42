@@ -1,0 +1,43 @@
+@import "./../../styles/index";
+
+.button {
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px 38px;
+  transition: all 0.3s;
+  text-align: center;
+  white-space: nowrap;
+  color: $button-color-text;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--link {
+    color: $button-color-text-additional;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--primary {
+    background-color: $button-color;
+  }
+
+  + .button {
+    margin-left: 23px;
+  }
+}

@@ -1,0 +1,259 @@
+@import "./../../styles/index";
+
+.pricing-plans {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @media screen and (max-width: $breakpoint-md) {
+    display: block;
+  }
+}
+
+.pricing-plan__item-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 33.33%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $breakpoint-md) {
+    width: 50%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+
+  + .pricing-plan__item-wrap {
+    @media screen and (max-width: $breakpoint-md) {
+      margin-top: 25px;
+    }
+  }
+
+  &:last-child {
+    .pricing-plan__item-value .item-text {
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 20px;
+        line-height: 1.4;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.pricing-plan__item {
+  background-color: $brand-color-inversed;
+  padding: 30px 50px 47px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 18px 40px;
+  }
+
+  &--middle {
+    padding-top: 70px;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      padding-top: 30px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      padding-top: 45px;
+    }
+  }
+
+  .button--primary {
+    width: 100%;
+    color: $button-color-text-additional;
+
+    .orange & {
+      background-color: $brand-color-orange;
+    }
+
+    .pink & {
+      background-color: $brand-color-pink;
+    }
+
+    .blue & {
+      background-color: $brand-color-blue;
+    }
+  }
+}
+
+.pricing-plan__item-title {
+  text-align: center;
+  font-size: $main-sub-font-size;
+  line-height: $main-sub-line-height;
+  color: $title-color;
+  font-family: $title-font-family;
+  font-weight: $bold-font-weight;
+  margin: 0 0 3px;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    font-size: 36px;
+  }
+}
+
+.pricing-plan__item-value {
+  text-align: center;
+  min-height: 120px;
+  margin-bottom: 32px;
+
+  .item-text {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 11px;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+  }
+
+  .item-price {
+    font-size: 55px;
+    line-height: 1.2;
+    font-family: $title-font-family;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 55px;
+    }
+
+    .item-price__inner {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 18px;
+    }
+
+    &--reduced {
+      font-size: 40px;
+      line-height: 58px;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        font-size: 35px;
+      }
+    }
+
+    .orange & {
+      color: $brand-color-orange;
+    }
+
+    .pink & {
+      color: $brand-color-pink;
+    }
+
+    .blue & {
+      color: $brand-color-blue;
+    }
+  }
+
+  .item-price__sup {
+    font-size: 25px;
+    line-height: 1;
+    top: -20px;
+    left: 10px;
+  }
+
+  .item-descr {
+    font-size: 16px;
+    line-height: 1;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.pricing-plan__item-link {
+  text-align: center;
+  margin-top: 42px;
+  font-family: $title-font-family;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  font-weight: $bold-font-weight;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-top: 37px;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .orange & {
+      color: $brand-color-orange;
+    }
+    .pink & {
+      color: $brand-color-pink;
+    }
+
+    .blue & {
+      color: $brand-color-blue;
+    }
+  }
+}
+
+.pricing-plan__item-description {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 44px;
+  position: relative;
+  font-size: 16px;
+
+  svg {
+    width: 11px;
+    height: 10px;
+    margin-right: 6px;
+    position: relative;
+    top: -2px;
+    right: 2px;
+
+    path {
+      .orange & {
+        fill: $brand-color-orange;
+      }
+
+      .pink & {
+        fill: $brand-color-pink;
+      }
+
+      .blue & {
+        fill: $brand-color-blue;
+      }
+    }
+  }
+
+  .item + .item {
+    margin-top: 10px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}

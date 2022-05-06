@@ -1,0 +1,25 @@
+@import "./../../styles/index";
+
+.login-group {
+  @media screen and (min-width: $breakpoint-sm+1) {
+    margin-left: auto;
+  }
+
+  .button--desktop-only {
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+}
+
+.login-group__mobile-item {
+  cursor: pointer;
+
+  @media screen and (min-width: $breakpoint-sm+1) {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    margin-top: 8px;
+  }
+}
