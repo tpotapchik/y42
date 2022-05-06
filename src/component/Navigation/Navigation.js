@@ -1,9 +1,9 @@
 import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 
-function Navigation() {
+function Navigation({NavigationClass}) {
   return (
-    <nav className="navigation navigation--desktop-only">
+    <nav className={`navigation navigation--desktop-only ${NavigationClass ? NavigationClass : ""}`}>
       <NavLink to="/platform" className="navigation__item">Platform</NavLink>
       <NavLink to="/solution" className="navigation__item">Solution</NavLink>
       <NavLink to="/blog" className="navigation__item">Blog</NavLink>

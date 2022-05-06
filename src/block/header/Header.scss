@@ -10,7 +10,9 @@
   padding-bottom: 20px;
 
   @media screen and (max-width: $breakpoint-sm) {
+    position: fixed;
     padding-top: 15px;
+    background-color: $brand-color;
   }
 }
 
@@ -64,5 +66,23 @@
     position: absolute;
     content: '';
     top: 8px;
+  }
+
+  &.active {
+    transform: rotate(45deg);
+    height: 3px;
+    width: 22px;
+
+    &::before {
+      top: 0;
+      height: 3px;
+      transform: rotate(0);
+    }
+
+    &::after {
+      top: 0;
+      height: 3px;
+      transform: rotate(90deg);
+    }
   }
 }
